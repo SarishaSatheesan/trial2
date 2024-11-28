@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="c5cb6b31-4b86-4f8a-abc5-c0590f9f31ac" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="trialadvancedFlow" doc:id="4f3cfd60-ceec-49a8-a166-993213d9cbd1" >
+		<http:listener doc:name="Listener" doc:id="7e9fc932-de18-4b3e-89e9-0abecfc74c59" config-ref="HTTP_Listener_config" path="/trial"/>
+		<logger level="INFO" doc:name="Logger" doc:id="13447672-46fc-4b7f-9ab0-d02328fcad55" message="Trial Check"/>
+	</flow>
+</mule>
