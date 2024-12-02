@@ -28,9 +28,23 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
+				<extensions>true</extensions><configuration>
+			<cloudHubDeployment>
+				<uri>https://anypoint.mulesoft.com</uri>
+				<username>Sarisha21</username>
+				<password>Sarisha123@</password>
+				<environment>Sandbox</environment>
+				<muleVersion>4.7.0</muleVersion>
+				<region>us-east-1</region>
+				<workers>1</workers>
+				<workerType>Micro</workerType>
+				<applicationName>trialadvanced123</applicationName>
+				<objectStoreV2>true</objectStoreV2>
+			</cloudHubDeployment>
+		</configuration>
 			</plugin>
 		</plugins>
+		
 	</build>
 
 	<dependencies>
