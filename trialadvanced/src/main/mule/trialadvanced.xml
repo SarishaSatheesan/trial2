@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="trialadvancedFlow" doc:id="4f3cfd60-ceec-49a8-a166-993213d9cbd1" >
 		<http:listener doc:name="Listener" doc:id="7e9fc932-de18-4b3e-89e9-0abecfc74c59" config-ref="HTTP_Listener_config" path="/trial"/>
+		<set-payload value="Just Check" doc:name="Set Payload" doc:id="5653df56-3896-4e7b-a69c-004559eb58f1" />
 		<logger level="INFO" doc:name="Logger" doc:id="13447672-46fc-4b7f-9ab0-d02328fcad55" message="Trial Check"/>
 	</flow>
 </mule>
